@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Create Your Recipe</title>
+    <style>.JumbotronBackground{
+        color: rgb(231, 222, 222);
+        background-image: url(https://reedrahn.com/images/food/food-photography-26.jpg);
+        background-size: cover;
+      }
+    </style>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/chef_home">Lee's Recipe Book</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/chef_home">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/chef_courses">My Courses<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/chef_recipes">My Recipes<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <ul class="navbar-nav  my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Log Out<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid JumbotronBackground text-center"> 
+        <div class="container">
+              <h1></h1>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+      {{  form.csrf  }}
+      <h5 class="mb-3 mx-2">Create your new recipe here!</h5>
+      <form action="" method="POST">
+        <label for="Recipe_Name" class="mx-2">Recipe Name</label>
+        <input type="text" name="recipe_name" id="Recipe_Name" class="form-control mx-2 mb-1">
+
+        <label for="Recipe_Type" class="mx-2">Recipe Type (Starter/Main/Dessert)</label>
+        <input type="text" name="recipe_type" id="Recipe_Type" class="form-control mx-2 mb-1">
+        
+        <label for="Image_URL" class="mx-2">Image URL</label>
+        <input type="text" name="recipe_image" id="Image_URL" class="form-control mx-2 mb-1">
+        
+        <label for="Recipe_Description" class="mx-2">Recipe Description</label>
+        <input type="text" name="recipe_description" id="Recipe_Description" class="form-control mx-2 mb-1">
+        
+        <label for="Recipe_Instructions" class="mx-2">Recipe Instructions</label>
+        <input type="text" name="recipe_instructions" id="Recipe_Instructions" class="form-control mx-2 mb-1">
+
+        <hr>
+
+        <button type="Submit" name="submit" class="btn btn-primary mx-2 mb-1">Create Recipe</button>
+      </form>
+  </div>
+
+    <hr>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

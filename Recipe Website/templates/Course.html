@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Lee's Recipe Book - {{course.course_name}}</title>
+    <style>.JumbotronBackground{
+      color: rgb(231, 222, 222);
+      background-image: url({{course.course_image}});
+      background-size: cover;
+    }
+    </style>
+  </head>
+
+  <!--Contents-->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/member_welcome">Lee's Recipe Book</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/member_welcome">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/courses">Courses<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Chef Recipies
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/member_starters">Starters</a>
+                    <a class="dropdown-item" href="/membermains">Mains</a>
+                    <a class="dropdown-item" href="/member_desserts">Desserts</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav  my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Log Out<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        </div>
+    </nav>
+
+    <!--Cards-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <div class="card-columns">
+            <div class="card"  style="width: 20rem;">
+              <img class="card-img-top img-fluid" src={{starter_1.recipe_image}} alt="Recipe Image">
+              <div class="card-body">
+                <h4 class="card-title">{{starter_1.recipe_name}}</h4>
+                <p class="card-text">{{starter_1.recipe_description}}</p>
+                <p class="card-text">Recipe Type: {{starter_1.recipe_type}}</p>
+                <p class="card-text">Likes: {{starter_1.recipe_likes}}</p>
+                <a href="/member_recipe/{{starter_1.id}}" class="btn btn-primary">See Recipe</a> 
+              </div>
+            </div>
+            <div class="card"  style="width: 20rem;">
+              <img class="card-img-top img-fluid" src={{starter_2.recipe_image}} alt="Recipe Image">
+              <div class="card-body">
+                <h4 class="card-title">{{starter_2.recipe_name}}</h4>
+                <p class="card-text">{{starter_2.recipe_description}}</p>
+                <p class="card-text">Recipe Type: {{starter_2.recipe_type}}</p>
+                <p class="card-text">Likes: {{starter_2.recipe_likes}}</p>
+                <a href="/member_recipe/{{starter_2.id}}" class="btn btn-primary">See Recipe</a> 
+              </div>
+            </div>
+            <div class="card"  style="width: 20rem;">
+              <img class="card-img-top img-fluid" src={{starter_3.recipe_image}} alt="Recipe Image">
+              <div class="card-body">
+                <h4 class="card-title">{{starter_3.recipe_name}}</h4>
+                <p class="card-text">{{starter_3.recipe_description}}</p>
+                <p class="card-text">Recipe Type: {{starter_3.recipe_type}}</p>
+                <p class="card-text">Likes: {{starter_3.recipe_likes}}</p>
+                <a href="/member_recipe/{{starter_3.id}}" class="btn btn-primary">See Recipe</a> 
+              </div>
+            </div>
+            <div class="card"  style="width: 20rem;">
+              <img class="card-img-top img-fluid" src={{main_1.recipe_image}} alt="Recipe Image">
+              <div class="card-body">
+                <h4 class="card-title">{{main_1.recipe_name}}</h4>
+                <p class="card-text">{{main_1.recipe_description}}</p>
+                <p class="card-text">Recipe Type: {{main_1.recipe_type}}</p>
+                <p class="card-text">Likes: {{main_1.recipe_likes}}</p>
+                <a href="/member_recipe/{{main_1.id}}" class="btn btn-primary">See Recipe</a> 
+              </div>
+            </div>
+            <div class="card"  style="width: 20rem;">
+              <img class="card-img-top img-fluid" src={{main_2.recipe_image}} alt="Recipe Image">
+              <div class="card-body">
+                <h4 class="card-title">{{main_2.recipe_name}}</h4>
+                <p class="card-text">{{main_2.recipe_description}}</p>
+                <p class="card-text">Recipe Type: {{main_2.recipe_type}}</p>
+                <p class="card-text">Likes: {{main_2.recipe_likes}}</p>
+                <a href="/member_recipe/{{main_2.id}}" class="btn btn-primary">See Recipe</a> 
+              </div>
+            </div>
+            <div class="card"  style="width: 20rem;">
+              <img class="card-img-top img-fluid" src={{main_3.recipe_image}} alt="Recipe Image">
+              <div class="card-body">
+                <h4 class="card-title">{{main_3.recipe_name}}</h4>
+                <p class="card-text">{{main_3.recipe_description}}</p>
+                <p class="card-text">Recipe Type: {{main_3.recipe_type}}</p>
+                <p class="card-text">Likes: {{main_3.recipe_likes}}</p>
+                <a href="/member_recipe/{{main_3.id}}" class="btn btn-primary">See Recipe</a> 
+              </div>
+            </div>
+            <div class="card"  style="width: 20rem;">
+              <img class="card-img-top img-fluid" src={{dessert_1.recipe_image}} alt="Recipe Image">
+              <div class="card-body">
+                <h4 class="card-title">{{dessert_1.recipe_name}}</h4>
+                <p class="card-text">{{dessert_1.recipe_description}}</p>
+                <p class="card-text">Recipe Type: {{dessert_1.recipe_type}}</p>
+                <p class="card-text">Likes: {{dessert_1.recipe_likes}}</p>
+                <a href="/member_recipe/{{dessert_1.id}}" class="btn btn-primary">See Recipe</a> 
+              </div>
+            </div>
+            <div class="card"  style="width: 20rem;">
+              <img class="card-img-top img-fluid" src={{dessert_2.recipe_image}} alt="Recipe Image">
+              <div class="card-body">
+                <h4 class="card-title">{{dessert_2.recipe_name}}</h4>
+                <p class="card-text">{{dessert_2.recipe_description}}</p>
+                <p class="card-text">Recipe Type: {{dessert_2.recipe_type}}</p>
+                <p class="card-text">Likes: {{dessert_2.recipe_likes}}</p>
+                <a href="/member_recipe/{{dessert_2.id}}" class="btn btn-primary">See Recipe</a> 
+              </div>
+            </div>
+            <div class="card"  style="width: 20rem;">
+              <img class="card-img-top img-fluid" src={{dessert_3.recipe_image}} alt="Recipe Image">
+              <div class="card-body">
+                <h4 class="card-title">{{dessert_3.recipe_name}}</h4>
+                <p class="card-text">{{dessert_3.recipe_description}}</p>
+                <p class="card-text">Recipe Type: {{dessert_3.recipe_type}}</p>
+                <p class="card-text">Likes: {{dessert_3.recipe_likes}}</p>
+                <a href="/member_recipe/{{dessert_3.id}}" class="btn btn-primary">See Recipe</a> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
